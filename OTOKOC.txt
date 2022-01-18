@@ -1,0 +1,4 @@
+sisteme admin kullanıcı adı 123 şifresi ile giriş yapabilirsiniz.
+Bu projeyi asp.net Mvc yapısı ile geliştirdim.
+Dosyaların içinde sql .sql uzantılı database'i de bulabilirsiniz.Tüm işlemler veritabanı üzerinden gerçekleşmektedir.
+  
