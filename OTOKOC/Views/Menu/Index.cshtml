@@ -1,0 +1,103 @@
+﻿@using OTOKOC.Models.Entity
+@model OTOKOC.Models.classes.Class1
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div style="width:100%;height:50px;border-bottom:1px solid #262424" >
+        <h5 style="margin-left:10px;margin-top:5px;float:left">TAHA İNCE</h5>
+        <h2 style="margin-right:10px;float:right"><b>OTOKOÇ</b> OTOMOTİV</h2>
+    </div>
+
+
+    <br />
+    @using (Html.BeginForm("Index", "Menu", FormMethod.Post))
+    {
+    <div style="margin:10px;">
+        <br />
+            @Html.DropDownListFor(y => y.deger4.First().ID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "btn btn-info" })
+
+            @Html.DropDownListFor(y => y.deger5.First().ID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "btn btn-danger" })
+        <button type="submit" class="btn btn-info">Ara</button>
+        </div>
+    }
+
+
+    </div>
+
+
+        <div>
+            <table class="table table-bordered">
+                <tr class="bg-dark" style="color:#dcdcdc">
+                    <td></td>
+                    <td>PARÇA NO</td>
+                    <td>PARÇA AD</td>
+                    <td>TUTAR</td>
+                    <td>ADET</td>
+                    <td>SEPETE EKLE</td>
+                </tr>
+                @foreach (var x in Model.deger3)
+                {
+            <tr>
+
+                <td>
+                    <img src="@x.FOTOGRAF" style="width:150px;height:100px; " />
+                </td>
+                <td>@x.NO</td>
+                <td>@x.AD</td>
+                <td>@x.FIYAT</td>
+                @using (Html.BeginForm("Ekle", "Menu", FormMethod.Post))
+                {
+                    <input type="hidden" name="URUN" value="@x.ID" />
+                    <input type="hidden" name="KULLANICI" value="@ViewBag.id" />
+                    <input type="hidden" name="TUTAR" value="@x.FIYAT" />
+
+
+                    <td><input class="form-control" name="ADET" placeholder="Adet Giriniz" /></td>
+                    <td><button class="btn btn-dark" type="submit">SEPETE EKLE</button></td>
+                }
+
+
+            </tr>
+
+
+                }
+
+
+
+            </table>
+
+        </div>
+
+    <button type="button" data-toggle="modal" class="btn btn-info" data-target="#MODAL1">Satış Yap</button>
+    <div class="modal" id="#MODAL1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Şatışlar</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

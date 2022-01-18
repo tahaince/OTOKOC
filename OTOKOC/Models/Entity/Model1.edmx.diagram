@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33799892ab854f31aa5be21d3b032404" Name="Diagram1">
+        <EntityTypeShape EntityType="OTOKOCModel.KULLANICI" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OTOKOCModel.PARCA" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OTOKOCModel.SIPARIS" Width="1.5" PointX="5" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="OTOKOCModel.FK_SIPARIS_KULLANICI" ManuallyRouted="false" />
+        <AssociationConnector Association="OTOKOCModel.FK_SIPARIS_PARCA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OTOKOCModel.MARKA" Width="1.5" PointX="0.75" PointY="12.5" />
+        <EntityTypeShape EntityType="OTOKOCModel.MODEL" Width="1.5" PointX="0.75" PointY="9.25" />
+        <EntityTypeShape EntityType="OTOKOCModel.OZELLIK" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="OTOKOCModel.sysdiagrams" Width="1.5" PointX="5.375" PointY="4.75" />
+        <AssociationConnector Association="OTOKOCModel.FK_MODEL_MARKA" />
+        <AssociationConnector Association="OTOKOCModel.FK_OZELLIK_MODEL" />
+        <AssociationConnector Association="OTOKOCModel.FK_OZELLIK_PARCA" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

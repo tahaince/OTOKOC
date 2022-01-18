@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #a8a9ae
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-bottom:2px; margin-top:3px;">
+        <div style="float:right; margin-right:10px;font:bold 30px arial; color:#1e1c1c"><b>OTOKOÇ</b> OTOMOTİV</div>
+
+
+    </div>
+    <br />
+    <div style="height:90vh;">
+        <div id="sol" style="  float: left;
+        width: 60%;height:100%;
+        overflow: hidden;">
+            <div style="margin:4rem 3rem 3rem 8rem">
+                <img src="~/focus.jpg" style="overflow: hidden; object-fit:contain;height:100%;width:100%" />
+            </div>
+        </div>
+        <div style="float:right;width:40%;">
+
+            <div>
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                {
+                    <form>
+                        <div style="margin:300px 7px 10px 250px">
+                            <h2>GİRİŞ</h2>
+                            <br />
+                            <div style="margin-top:30px;margin-right:30px">
+                                <input type="text" class="form-control" placeholder="Kullanıcı adı veya Mail adresinizi giriniz..." name="KULLANICIADI" style="width:300px;">
+                            </div>
+                            <div>
+                                <div style="margin-top:30px;margin-right:30px">
+                                    <input type="text" class="form-control" placeholder="Parolanızı giriniz..." name="KULLANICIADI" style="width:300px;">
+                                </div>
+                            </div>
+                            <br />
+                            <div>
+                                <button class="btn btn-danger">LOG-IN</button>
+                            </div>
+                    </form>
+                }
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
